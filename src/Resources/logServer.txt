@@ -1,0 +1,8 @@
+окт. 07, 2020 2:13:27 PM ru.nsu.fit.cdrann.Server.Main main
+INFO: Create server..
+окт. 07, 2020 2:13:27 PM ru.nsu.fit.cdrann.Server.Main main
+INFO: Start server..
+окт. 07, 2020 2:13:38 PM ru.nsu.fit.cdrann.Server.ClientHandler <init>
+INFO: Try to configure ClientHandler..
+окт. 07, 2020 2:13:38 PM ru.nsu.fit.cdrann.Server.ClientHandler <init>
+INFO: Created new handler for socket port:51553

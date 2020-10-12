@@ -1,0 +1,4 @@
+окт. 07, 2020 2:07:41 PM ru.nsu.fit.cdrann.Server.Main main
+INFO: Create server..
+окт. 07, 2020 2:07:41 PM ru.nsu.fit.cdrann.Server.Main main
+INFO: Start server..
