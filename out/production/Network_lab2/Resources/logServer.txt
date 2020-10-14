@@ -1,4 +1,8 @@
-окт. 07, 2020 2:07:41 PM ru.nsu.fit.cdrann.Server.Main main
+окт. 14, 2020 12:05:55 PM ru.nsu.fit.cdrann.Server.Main main
 INFO: Create server..
-окт. 07, 2020 2:07:41 PM ru.nsu.fit.cdrann.Server.Main main
+окт. 14, 2020 12:05:55 PM ru.nsu.fit.cdrann.Server.Main main
 INFO: Start server..
+окт. 14, 2020 12:06:08 PM ru.nsu.fit.cdrann.Server.ClientHandler <init>
+INFO: Try to configure ClientHandler..
+окт. 14, 2020 12:06:08 PM ru.nsu.fit.cdrann.Server.ClientHandler <init>
+INFO: Created new handler for socket port:61409

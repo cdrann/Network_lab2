@@ -11,8 +11,6 @@ import java.util.logging.Logger;
 
 public class ClientHandler implements Runnable {
     private final static Logger logger = Logger.getLogger(ClientHandler.class.getName());
-    private final int SIZE = 4096;
-    private final int TIMEOUT = 3000;
 
     private Socket clientSocket;
     private DataInputStream inputStream;
@@ -69,6 +67,7 @@ public class ClientHandler implements Runnable {
     public void run() {
         try {
             long fileNameSize = inputStream.readLong();
+            int SIZE = 4096;
             if (fileNameSize > SIZE) {
                 throw new TooLongNameException(fileNameSize);
             }
@@ -94,6 +93,7 @@ public class ClientHandler implements Runnable {
 
 
                 while ((bytesCurrReceived = inputStream.read(buff)) != -1) {
+                    int TIMEOUT = 3000;
                     if ((currTime = System.currentTimeMillis() - timeBorder) > TIMEOUT) {
                         printAverageSpeed(System.currentTimeMillis() - startTime, bytesCommonReceived);
                         printInstantSpeed(currTime, bytesInstantReceived);

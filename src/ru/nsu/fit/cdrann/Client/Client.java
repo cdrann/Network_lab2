@@ -13,7 +13,7 @@ public class Client {
 
     Client(String filePath, String ipAddress, int port) {
         try {
-            clientSocket = new Socket("localhost", port); //ipAddress
+            clientSocket = new Socket(ipAddress, port);
             this.sender = new Sender(filePath);
             this.receiver = new Receiver();
         } catch (IOException ex) {
@@ -42,7 +42,6 @@ public class Client {
     }
 
     private class Sender extends Thread {
-        private final int SIZE = 4096;
         private String filePath;
         private DataOutputStream outputStream;
 
@@ -66,7 +65,9 @@ public class Client {
                 outputStream.writeUTF(file.getName());
                 outputStream.writeLong(file.length());
 
+                int SIZE = 4096;
                 byte[] buf = new byte[SIZE];
+
                 int sentBytes;
                 while (((sentBytes = inputStream.read(buf)) != -1) && !isInterrupted()) {
                     outputStream.write(buf, 0, sentBytes);
